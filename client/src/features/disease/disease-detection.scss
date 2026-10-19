@@ -1,0 +1,300 @@
+
+.disease-detection {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 32px;
+    padding: 28px;
+    box-sizing: border-box;
+    color: #24352a;
+    background: #ffffff;
+    border: 1px solid #dce8dc;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgb(28 67 39 / 8%);
+
+    h2 {
+        margin: 0 0 10px;
+        color: #174d32;
+        font-size: 26px;
+        line-height: 1.4;
+    }
+
+    .disease-description {
+        margin: 0;
+        color: #647168;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+.disease-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.disease-icon {
+    display: grid;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    background: #eaf5eb;
+    border-radius: 12px;
+    font-size: 25px;
+}
+
+.disease-field {
+    display: block;
+    margin-bottom: 22px;
+
+    > span {
+        display: block;
+        margin-bottom: 9px;
+        color: #24352a;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    select,
+    input[type="file"] {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        color: #24352a;
+        background: #ffffff;
+        border: 1px solid #ccd9cc;
+        border-radius: 9px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:focus {
+            border-color: #217344;
+            box-shadow: 0 0 0 3px rgb(33 115 68 / 12%);
+        }
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    input[type="file"] {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    small {
+        display: block;
+        margin-top: 9px;
+        color: #647168;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
+
+.disease-preview {
+    margin: 24px 0;
+    padding: 16px;
+    background: #f5f8f4;
+    border: 1px solid #e0e9de;
+    border-radius: 12px;
+
+    p {
+        margin: 0 0 12px;
+        color: #174d32;
+        font-weight: 700;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-height: 380px;
+        object-fit: contain;
+        background: #ffffff;
+        border-radius: 8px;
+    }
+
+    span {
+        display: block;
+        margin-top: 10px;
+        color: #647168;
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+}
+
+.disease-submit {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 10px;
+    background: #217344;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+
+    &:hover:not(:disabled) {
+        background: #185b34;
+        transform: translateY(-1px);
+    }
+
+    &:focus-visible {
+        outline: 3px solid #a8d5b5;
+        outline-offset: 3px;
+    }
+
+    &:disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+        transform: none;
+    }
+}
+
+.disease-progress {
+    margin: 14px 0 0;
+    color: #647168;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.disease-error,
+.disease-message {
+    padding: 12px 14px;
+    margin: 16px 0;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.disease-error {
+    color: #a51d25;
+    background: #fff0f0;
+    border: 1px solid #f3c6c8;
+}
+
+.disease-message {
+    color: #176536;
+    background: #eff9f0;
+    border: 1px solid #c9e8cf;
+}
+
+.disease-results {
+    margin-top: 28px;
+    padding: 24px;
+    color: #24352a;
+    background: #f8fbf7;
+    border: 1px solid #d8e3d6;
+    border-radius: 14px;
+    overflow-wrap: anywhere;
+
+    h3 {
+        margin: 0 0 20px;
+        padding-bottom: 12px;
+        color: #174d32;
+        font-size: 22px;
+        border-bottom: 1px solid #dce8dc;
+    }
+
+    p {
+        line-height: 1.7;
+    }
+
+    strong {
+        color: #174d32;
+    }
+
+    h4 {
+        margin: 24px 0 12px;
+        color: #217344;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 22px;
+    }
+
+    li {
+        margin-bottom: 10px;
+        color: #405247;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    > p:empty {
+        display: none;
+    }
+
+    .disease-disclaimer {
+        margin: 24px 0 0;
+        padding: 14px;
+        color: #66531b;
+        background: #fff8df;
+        border: 1px solid #f0e1a8;
+        border-radius: 8px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+.disease-result-summary {
+    padding: 14px 16px;
+    background: #ffffff;
+    border: 1px solid #e0e9de;
+    border-radius: 10px;
+
+    p {
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .disease-detection {
+        padding: 18px;
+        margin-bottom: 24px;
+        border-radius: 12px;
+
+        h2 {
+            font-size: 21px;
+        }
+
+        .disease-description {
+            font-size: 14px;
+        }
+    }
+
+    .disease-heading {
+        gap: 10px;
+    }
+
+    .disease-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 21px;
+    }
+
+    .disease-results {
+        padding: 16px;
+
+        h3 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 15px;
+        }
+
+        li {
+            font-size: 13px;
+        }
+    }
+}

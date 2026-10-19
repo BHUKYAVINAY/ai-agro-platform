@@ -1,0 +1,206 @@
+
+.crop-analytics {
+    color: #183b2b;
+
+    .analytics-intro {
+        margin-bottom: 20px;
+
+        h2 {
+            margin: 8px 0;
+            color: #174c32;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            overflow-wrap: anywhere;
+        }
+
+        p {
+            margin: 0;
+            color: #637366;
+            line-height: 1.6;
+        }
+    }
+
+    .analytics-eyebrow {
+        color: #28804d;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+    }
+
+    .analytics-stat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-bottom: 22px;
+    }
+
+    .analytics-stat-card {
+        min-width: 0;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #e0ebe2;
+        border-radius: 14px;
+        box-shadow: 0 5px 18px rgb(22 65 39 / 4%);
+
+        span {
+            display: block;
+            margin-bottom: 9px;
+            color: #708073;
+            font-size: 0.85rem;
+        }
+
+        strong {
+            color: #174c32;
+            font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+            overflow-wrap: anywhere;
+        }
+    }
+
+    .analytics-panel {
+        min-width: 0;
+        margin-bottom: 22px;
+        padding: 22px;
+        background: #fff;
+        border: 1px solid #e0ebe2;
+        border-radius: 16px;
+        box-shadow: 0 5px 18px rgb(22 65 39 / 4%);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .analytics-panel-heading {
+        margin-bottom: 18px;
+
+        h3 {
+            margin: 0 0 6px;
+            color: #174c32;
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin: 0;
+            color: #708073;
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+    }
+
+    .analytics-chart {
+        width: 100%;
+        height: 320px;
+        min-width: 0;
+    }
+
+    .analytics-empty {
+        padding: 28px 16px;
+        color: #708073;
+        text-align: center;
+        background: #f8fbf8;
+        border: 1px dashed #d3e3d6;
+        border-radius: 12px;
+        line-height: 1.6;
+
+        h4 {
+            margin: 0 0 8px;
+            color: #315440;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .analytics-timeline {
+        display: grid;
+        gap: 0;
+    }
+
+    .analytics-timeline-item {
+        position: relative;
+        display: grid;
+        grid-template-columns: 14px minmax(0, 1fr);
+        gap: 12px;
+        padding-bottom: 20px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &:not(:last-child)::before {
+            position: absolute;
+            top: 14px;
+            bottom: 0;
+            left: 6px;
+            width: 2px;
+            background: #d7e9db;
+            content: "";
+        }
+    }
+
+    .analytics-timeline-marker {
+        position: relative;
+        z-index: 1;
+        width: 12px;
+        height: 12px;
+        margin-top: 3px;
+        background: #3b9b5e;
+        border: 2px solid #e5f5e8;
+        border-radius: 50%;
+    }
+
+    .analytics-timeline-content {
+        min-width: 0;
+        padding: 13px;
+        background: #fbfdfb;
+        border: 1px solid #e0ebe2;
+        border-radius: 10px;
+
+        p {
+            margin: 8px 0 0;
+            color: #526b5b;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+    }
+
+    .analytics-timeline-top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px;
+
+        strong {
+            color: #315440;
+        }
+
+        span {
+            color: #287b46;
+            font-size: 0.88rem;
+            font-weight: 750;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .crop-analytics {
+        .analytics-stat-grid {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .crop-analytics {
+        .analytics-stat-card,
+        .analytics-panel {
+            padding: 16px;
+        }
+
+        .analytics-chart {
+            height: 260px;
+        }
+    }
+}

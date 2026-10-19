@@ -1,0 +1,285 @@
+
+.mandi-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+    color: var(--text-primary, #1f2937);
+}
+
+.mandi-header {
+    margin-bottom: 24px;
+
+    h1 {
+        margin: 6px 0 10px;
+        font-size: clamp(28px, 4vw, 38px);
+    }
+
+    p {
+        color: var(--text-secondary, #64748b);
+        line-height: 1.6;
+    }
+}
+
+.mandi-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #16804a !important;
+}
+
+.mandi-panel {
+    padding: 24px;
+    margin-bottom: 24px;
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 16px;
+
+    h2 {
+        margin: 0 0 20px;
+        font-size: 21px;
+    }
+}
+
+.mandi-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    input {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        border: 1px solid #cbd5e1;
+        border-radius: 9px;
+        background: var(--input-bg, #ffffff);
+        color: inherit;
+        font: inherit;
+
+        &:focus {
+            outline: 2px solid #86efac;
+            border-color: #16804a;
+        }
+    }
+}
+
+.mandi-primary-button,
+.mandi-secondary-button,
+.mandi-delete-button {
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 9px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+}
+
+.mandi-primary-button {
+    grid-column: 1 / -1;
+    background: #16804a;
+    color: white;
+
+    &:hover:not(:disabled) {
+        background: #11683b;
+    }
+}
+
+.mandi-secondary-button {
+    background: #e8f5ed;
+    color: #166534;
+}
+
+.mandi-delete-button {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.mandi-message {
+    padding: 13px 16px;
+    margin-bottom: 18px;
+    border-radius: 9px;
+}
+
+.mandi-error {
+    color: #991b1b;
+    background: #fee2e2;
+}
+
+.mandi-success {
+    color: #166534;
+    background: #dcfce7;
+}
+
+.mandi-list-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.mandi-empty {
+    color: var(--text-secondary, #64748b);
+}
+
+.mandi-table-wrapper {
+    overflow-x: auto;
+}
+
+.mandi-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+    th,
+    td {
+        padding: 14px 12px;
+        border-bottom: 1px solid var(--border-color, #e5e7eb);
+        white-space: nowrap;
+    }
+
+    th {
+        font-size: 12px;
+        color: var(--text-secondary, #64748b);
+        text-transform: uppercase;
+    }
+
+    td {
+        font-size: 14px;
+    }
+
+    small {
+        display: block;
+        margin-top: 5px;
+        color: var(--text-secondary, #64748b);
+        white-space: normal;
+    }
+}
+
+@media (max-width: 640px) {
+    .mandi-page {
+        padding: 20px 14px 32px;
+    }
+
+    .mandi-panel {
+        padding: 16px;
+    }
+
+    .mandi-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.profit-calculator {
+    margin-top: 28px;
+}
+
+.profit-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+
+    h2 {
+        margin-bottom: 8px;
+    }
+
+    p:not(.mandi-eyebrow) {
+        color: var(--text-secondary, #64748b);
+        line-height: 1.6;
+    }
+}
+
+.profit-section-title {
+    margin: 28px 0 18px;
+    font-size: 17px;
+}
+
+.profit-results {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.profit-result-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 12px;
+    background: var(--input-bg, #f8fafc);
+
+    span {
+        color: var(--text-secondary, #64748b);
+        font-size: 13px;
+    }
+
+    strong {
+        overflow-wrap: anywhere;
+        font-size: clamp(18px, 2vw, 24px);
+    }
+
+    small {
+        color: var(--text-secondary, #64748b);
+        line-height: 1.5;
+    }
+
+    &.is-profit {
+        border-color: #86efac;
+        background: #f0fdf4;
+
+        strong {
+            color: #166534;
+        }
+    }
+
+    &.is-loss {
+        border-color: #fca5a5;
+        background: #fef2f2;
+
+        strong {
+            color: #b91c1c;
+        }
+    }
+}
+
+.profit-disclaimer {
+    margin-top: 20px;
+    color: var(--text-secondary, #64748b);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+    .profit-results {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .profit-heading {
+        flex-direction: column;
+    }
+}
